@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springbatch
+    username: root
+    password: 1234
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: create
+  batch:
+    jdbc:
+      initialize-schema: always
