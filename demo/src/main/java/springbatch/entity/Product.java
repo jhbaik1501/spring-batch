@@ -10,11 +10,13 @@ import javax.persistence.Id;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class Product {
 
 	@Id
@@ -39,7 +41,11 @@ public class Product {
 
 	public static Product createRandomProduct() {
 		Random random = new Random();
-		String name = "Product " + random.nextInt();
+
+		String name = "Product " + random.ints(97, 123)
+			.limit(5)
+			.collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+			.toString();
 		Double price = random.nextDouble() * 100;
 		Date expirationDate = new Date(System.currentTimeMillis() + random.nextInt(365) * 24 * 60 * 60 * 1000);
 		Date creationDate = new Date();

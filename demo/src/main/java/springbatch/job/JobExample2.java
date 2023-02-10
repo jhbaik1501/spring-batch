@@ -67,10 +67,4 @@ public class JobExample2 {
 			})
 			.build();
 	}
-
-
-	@Bean
-	public TaskExecutor taskExecutor() {
-		return new SimpleAsyncTaskExecutor();
-	}
 }

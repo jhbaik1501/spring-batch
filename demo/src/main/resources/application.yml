@@ -13,4 +13,4 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      names: ${job.name:helloJob}
+      names: ${job.name:extractJob}
