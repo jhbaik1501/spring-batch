@@ -40,10 +40,10 @@ public class JobExample2 {
         return jobBuilderFactory.get("flowJob")
                 .incrementer(new RunIdIncrementer())
                 .start(flowJobStep1())
-
                 // .next(decider)
                 .on("COMPLETED").to(flowJobStep2())
                 // .from(decider)
+                .from(flowJobStep1())
                 .on("FAILED").to(flowJobStep3())
                 .end()
                 .build();
@@ -87,7 +87,6 @@ public class JobExample2 {
         @Override
         public FlowExecutionStatus decide(JobExecution jobExecution, StepExecution stepExecution) {
             ExecutionContext jobExecutionContext = jobExecution.getExecutionContext();
-
             Object ex = jobExecutionContext.get("ex");
             if (ex == null) {
                 return FlowExecutionStatus.FAILED;

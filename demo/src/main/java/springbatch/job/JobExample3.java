@@ -26,6 +26,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import lombok.RequiredArgsConstructor;
 import springbatch.jobExample3.ProductFieldSetMapper;
@@ -57,14 +58,13 @@ public class JobExample3 {
 			.reader(csvItemReader())
 			.processor(new ProductItemProcessor())
 			.writer(dbItemWriter())
-			.taskExecutor(taskExecutor())
+			// .taskExecutor(taskExecutor())
 			.build();
 	}
 
 	private Step extractStep2() {
 		return stepBuilderFactory.get("makeStepPrint")
 			.tasklet((contribution, chunkContext) -> {
-
 				System.out.println(
 					"성공, " + contribution.getStepExecution().getJobExecution().getExecutionContext().get("number")
 						+ "개 데이터 INSERT");
@@ -94,4 +94,15 @@ public class JobExample3 {
 	public TaskExecutor taskExecutor() {
 		return new SimpleAsyncTaskExecutor();
 	}
+
+	// @Bean
+	// public TaskExecutor taskExecutor2() {
+	// 	ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+	// 	executor.setCorePoolSize(5);
+	// 	executor.setMaxPoolSize(5);
+	// 	executor.setQueueCapacity(500);
+	// 	executor.setThreadNamePrefix("async-");
+	// 	executor.initialize();
+	// 	return executor;
+	// }
 }
