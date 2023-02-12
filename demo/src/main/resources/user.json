@@ -3,72 +3,60 @@
       "userId": 1,
       "firstName": "Kim",
       "lastName": "as23",
-      "phoneNumber": "123456",
-      "emailAddress": "AAAAA@test.com",
-      "homepage": "https://amogg.tistory.com/1"
+      "phoneNumber": "123456"
     },
     {
       "userId": 2,
       "firstName": "Lee",
       "lastName": "h5jdd",
-      "phoneNumber": "123456",
-      "homepage": "https://amogg.tistory.com/2"
+      "phoneNumber": "123456"
     },
     {
       "userId": 3,
       "firstName": "Ji",
       "lastName": "2dhbs",
-      "phoneNumber": "33333333",
-      "homepage": "https://amogg.tistory.com/3"
+      "phoneNumber": "33333333"
     },
     {
       "userId": 4,
       "firstName": "Jung",
       "lastName": "bacasd",
-      "phoneNumber": "222222222",
-      "homepage": "https://amogg.tistory.com/4"
+      "phoneNumber": "222222222"
     },
     {
       "userId": 5,
       "firstName": "Park",
       "lastName": "asdfasdf",
-      "phoneNumber": "111111111",
-      "homepage": "https://amogg.tistory.com/5"
+      "phoneNumber": "111111111"
     },
     {
       "userId": 6,
       "firstName": "Kim",
       "lastName": "as23",
-      "phoneNumber": "123456",
-      "emailAddress": "AAAAA@test.com",
-      "homepage": "https://amogg.tistory.com/1"
+      "phoneNumber": "123456"
     },
     {
       "userId": 7,
       "firstName": "Lee",
       "lastName": "h5jdd",
-      "phoneNumber": "123456",
-      "homepage": "https://amogg.tistory.com/2"
+      "phoneNumber": "123456"
     },
     {
       "userId": 8,
       "firstName": "Jo",
       "lastName": "2dhbs",
-      "phoneNumber": "33333333",
-      "homepage": "https://amogg.tistory.com/3"
+      "phoneNumber": "33333333"
     },
     {
       "userId": 9,
       "firstName": "BAIK",
       "lastName": "bacasd",
-      "phoneNumber": "222222222",
-      "homepage": "https://amogg.tistory.com/4"
+      "phoneNumber": "222222222"
     },
     {
       "userId": 10,
       "firstName": "Lee",
       "lastName": "asdfasdf",
-      "phoneNumber": "111111111",
-      "homepage": "https://amogg.tistory.com/5"
+      "phoneNumber": "111111111"
     }
 ]

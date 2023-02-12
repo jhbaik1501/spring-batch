@@ -47,11 +47,7 @@ public class ChunkProgram {
 			.<String, String>chunk(2)
 			.reader(new ItemReader<String>() {
 				@Override
-				public String read() throws
-					Exception,
-					UnexpectedInputException,
-					ParseException,
-					NonTransientResourceException {
+				public String read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
 					String next;
 					try {
 						next = stringIterator.next();

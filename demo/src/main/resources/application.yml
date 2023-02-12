@@ -13,4 +13,4 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      names: ${job.name:chunkEx}
+      names: ${job.name:helloJob}
