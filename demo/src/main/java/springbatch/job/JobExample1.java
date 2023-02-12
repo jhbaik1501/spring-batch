@@ -46,7 +46,7 @@ public class JobExample1 {
 
 	@Bean
 	public Step helloStep2() {
-		return stepBuilderFactory.get("helloStep1")
+		return stepBuilderFactory.get("helloStep2")
 			.tasklet(new Tasklet() {
 				@Override
 				public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
